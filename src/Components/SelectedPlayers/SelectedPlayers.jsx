@@ -1,10 +1,16 @@
-import React from 'react';
 
-const SelectedPlayers = () => {
+import SelectedPlayerCard from '../SelectedPlayerCard/selectedPlayerCard';
+
+const SelectedPlayers = ({purchasedPlayers,removePlayer}) => {
+   
+   
+   
     return (
-        <div>
-            
-        </div>
+       <div>
+      {
+          purchasedPlayers.map(player=><SelectedPlayerCard player={player} removePlayer={removePlayer} ></SelectedPlayerCard>)
+      }
+       </div>
     );
 };
 
